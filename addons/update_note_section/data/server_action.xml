@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Define the server action -->
+    <record id="action_update_sales_note_section" model="ir.actions.server">
+    <field name="name">Update Notes and Sections</field>
+    <field name="model_id" ref="sale.model_sale_order"/>
+    <field name="binding_model_id" ref="sale.model_sale_order"/>
+    <field name="state">code</field>
+    <field name="code">
+action = env.ref('update_note_section.action_update_note_section_wizard').read()[0]
+action['context'] = {'sale_order_id': record.id}
+action
+    </field>
+    <field name="groups_id" eval="[(6, 0, [ref('update_note_section.group_update_sales_note_section')])]"/>
+</record>
+
+     <record id="action_update_purchase_note_section" model="ir.actions.server">
+    <field name="name">Update Notes and Sections</field>
+    <field name="model_id" ref="purchase.model_purchase_order"/>
+    <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+    <field name="state">code</field>
+    <field name="code">
+action = env.ref('update_note_section.action_update_purchase_note_section_wizard').read()[0]
+action['context'] = {'purchase_order_id': record.id}
+action
+    </field>
+    <field name="groups_id" eval="[(6, 0, [ref('update_note_section.group_update_purchase_note_section')])]"/>
+</record>
+
+    <record id="action_update_invoice_note_section" model="ir.actions.server">
+    <field name="name">Update Notes and Sections</field>
+    <field name="model_id" ref="account.model_account_move"/>
+    <field name="binding_model_id" ref="account.model_account_move"/>
+    <field name="state">code</field>
+    <field name="code">
+action = env.ref('update_note_section.action_update_invoice_section_wizard').read()[0]
+action['context'] = {'invoice_id': record.id}
+action
+    </field>
+    <field name="groups_id" eval="[(6, 0, [ref('update_note_section.group_update_invoice_note_section')])]"/>
+</record>
+
+</odoo>

@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_update_invoice_note_section_wizard" model="ir.ui.view">
+        <field name="name">view.update.note.section.wizard</field>
+        <field name="model">invoice.note.section.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Sections and Notes">
+                <group>
+                    <field name="invoice_id"/>
+                    <field name="line_ids" widget="one2many_list">
+                        <tree editable="bottom">
+                            <field name="order_line_id"/>
+                            <field name="display_type"/>
+                            <field name="name"/>
+                            <field name="update"/>
+                        </tree>
+                    </field>
+                </group>
+
+                <footer>
+                    <button string="Update" type="object" name="action_update" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_update_invoice_section_wizard" model="ir.actions.act_window">
+        <field name="name">Update Sections and Notes</field>
+        <field name="res_model">invoice.note.section.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="update_note_section.view_update_invoice_note_section_wizard"/>
+        <field name="target">new</field>
+        <field name="context">{'default_invoice_id': invoice_id}</field>
+    </record>
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+
+
+<!--    <record id="view_sale_order_form_inherit" model="ir.ui.view">-->
+<!--    <field name="name">sale.order.form.update_note_section</field>-->
+<!--    <field name="model">sale.order</field>-->
+<!--    <field name="inherit_id" ref="sale.view_order_form"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <xpath expr="//button[@name='action_cancel']" position="before">-->
+<!--            <button name="%(action_update_sales_note_section)d"-->
+<!--                    string="Update Notes and Sections"-->
+<!--                    type="action"-->
+<!--                    context="{'active_id': active_id, 'active_model': 'sale.order'}"-->
+<!--                    groups="update_note_section.group_update_sales_note_section"/>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--</record>-->
+
+<!--    <record id="view_purchase_order_form_inherit" model="ir.ui.view">-->
+<!--    <field name="name">purchase.order.form.update_note_section</field>-->
+<!--    <field name="model">purchase.order</field>-->
+<!--    <field name="inherit_id" ref="purchase.purchase_order_form"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <xpath expr="//button[@name='action_create_invoice']" position="after">-->
+<!--            <button name="%(action_update_purchase_note_section)d"-->
+<!--                    string="Update Notes and Sections"-->
+<!--                    type="action"-->
+<!--                    context="{'active_id': active_id, 'active_model': 'purchase.order'}"-->
+<!--                    groups="update_note_section.group_update_purchase_note_section"/>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--</record>-->
+</odoo>

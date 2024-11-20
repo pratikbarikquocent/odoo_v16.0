@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="update_note_section.group_update_sales_note_section" model="res.groups">
+        <field name="name">Can Update Notes And Section In Sales</field>
+    </record>
+    <record id="update_note_section.group_update_purchase_note_section" model="res.groups">
+        <field name="name">Can Update Notes And Section In Purchase</field>
+    </record>
+    <record id="update_note_section.group_update_invoice_note_section" model="res.groups">
+        <field name="name">Can Update Notes and Section in Invoicing</field>
+    </record>
+
+
+    <record id="access_order_line_update_wizard_line" model="ir.model.access">
+        <field name="name">access.update.note.section.wizard.line</field>
+        <field name="model_id" ref="update_note_section.model_sale_order_note_section_wizard_line"/>
+        <field name="group_id" ref="update_note_section.group_update_sales_note_section"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_purchase_order_line_update_wizard_line" model="ir.model.access">
+        <field name="name">access.purchase.update.note.section.wizard.line</field>
+        <field name="model_id" ref="update_note_section.model_purchase_order_note_section_wizard_line"/>
+        <field name="group_id" ref="update_note_section.group_update_purchase_note_section"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_invoice_line_update_wizard_line" model="ir.model.access">
+        <field name="name">access.invoice.update.note.section.wizard.line</field>
+        <field name="model_id" ref="update_note_section.model_invoice_note_section_wizard_line"/>
+        <field name="group_id" ref="update_note_section.group_update_invoice_note_section"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+</odoo>

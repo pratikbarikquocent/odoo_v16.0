@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_vendor_tax_update_wizard,access.product.vendor.tax.update.wizard,model_product_vendor_tax_update_wizard,,1,1,1,1
+

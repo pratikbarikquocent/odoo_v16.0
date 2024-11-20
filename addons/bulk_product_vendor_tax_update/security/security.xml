@@ -1,0 +1,7 @@
+<odoo>
+    <record id="bulk_product_vendor_tax_update_groups" model="res.groups">
+        <field name="name">Update Mass Product Vendor Taxes</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+    </record>
+</odoo>
+

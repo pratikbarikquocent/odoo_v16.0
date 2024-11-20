@@ -1,0 +1,7 @@
+<odoo>
+    <record id="update_mass_pproduct_catagory_groups" model="res.groups">
+        <field name="name">Update Mass Product Catagory</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+    </record>
+</odoo>
+
